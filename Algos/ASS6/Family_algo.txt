@@ -1,0 +1,24 @@
+Brother relationship:
+
+If they both are male.
+If they have the same parent.
+Suppose we have some clauses to illustrate the relationship:
+
+parent(somit,komal).
+parent(somit,manish).
+male(komal).
+male(manish).
+brother(X,Y): parent(Z,X), parent(Z, Y), male(X), male(Y)
+From the above clauses, we can conclude that b and c are brothers, but we can create 3 combinations that are true, combinations are (komal,komal), (komal,manish), (manish,manish) but actually (komal,komal) and (manish,manish) are not real brothers because they are same brothers.
+
+Let us see the working of the family tree by considering an example that can be formed from the prolog family tree. We want to make a family tree and as per our definition that can be mapped into facts and rules, so that we can run some queries on them,
+
+Here we are having one family tree, so from the above sample of the family tree, there are some relationships between them; from the above family tree diagram, we can say that ‘C’ is a child of A and B, which means that A is a parent of C and B is also a parent of C, B also has one child D, C has one brother D, whose parent is also A and B, so we can make predicates to call families as follows, C has two child E and F and F also has a child G, following above family tree we have written some clauses below, and every clause must be terminated by a full stop(.).
+
+parent(A,C).
+parent(B,C).
+parent(B,D).
+parent(C,E).
+parent(C,F).
+parent(F,G).
+From the above examples, we can illustrate some important points that we can define parent relation by taking n-number of objects which is based on the given information of family tree so that user can easily pose the query to prolog system about relations which are defined in programs, the prolog programs terminated by clauses and that consists of clauses, the arguments of relations are of a constant type or related to any general object as we given above, objects are of atom or variables types.
