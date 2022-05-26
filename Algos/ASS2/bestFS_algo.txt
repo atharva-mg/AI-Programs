@@ -1,0 +1,43 @@
+The solution to Water Jug Problem in Artificial Intelligence
+
+1. Current state = (0, 0)
+
+2. Loop until the goal state (2, 0) reached
+
+  – Apply a rule whose left side matches the current state
+
+  – Set the new current state to be the resulting state
+
+(0, 0) – Start State
+
+(0, 3) – Rule 2, Fill the 3-liter jug
+
+(3, 0) – Rule 9, Pour all the water from the 3-liter jug into the 4-liter jug.
+
+(3, 3) – Rule 2, Fill the 3-liter jug
+
+(4, 2) – Rule 7, Pour water from the 3-liter jug into the 4-liter jug until the 4-liter jug is full.
+
+(0, 2) –  Rule 5, Empty the 4-liter jug on the ground
+
+(2, 0) – Rule 9, Pour all the water from the 3-liter jug into the 4-liter jug.
+
+Goal State reached
+
+Another solution to Water Jug Problem in Artificial Intelligence
+
+(0, 0) – Start State
+
+(4, 0) – Rule 1, Fill the 4-liter jug
+
+(1, 3) – Rule 8, Pour water from the 4-liter jug into the 3-liter jug until the 3-liter jug is full.
+
+(1, 0) – Rule 6, Empty the 3-liter jug on the ground
+
+(0, 1) – Rule 10, Pour all the water from the 4-liter jug into the 3-liter jug.
+
+(4, 1) –  Rule 1, Fill the 4-liter jug
+
+(2, 3) – Rule 8, Pour water from the 4-liter jug into the 3-liter jug until the 3-liter jug is full.
+
+Goal State reached
