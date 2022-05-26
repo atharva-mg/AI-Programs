@@ -1,0 +1,48 @@
+Approach: 
+The idea is to assign colors one by one to different vertices, starting from the vertex 0. 
+Before assigning a color, check for safety by considering already assigned colors to the adjacent vertices 
+i.e check if the adjacent vertices have the same color or not. 
+If there is any color assignment that does not violate the conditions, 
+mark the color assignment as part of the solution. 
+If no assignment of color is possible then backtrack and return false.
+
+Algorithm:
+1. Create a recursive function that takes the graph, current index, 
+number of vertices, and output color array.
+2. If the current index is equal to the number of vertices. 
+Print the color configuration in output array.
+3. Assign a color to a vertex (1 to m).
+4. For every assigned color, check if the configuration is safe, (i.e. check if the adjacent vertices do not have the same color) r
+ecursively call the function with next index and number of vertices
+5. If any recursive function returns true break the loop and return true.
+6. If no recursive function returns true then return false.
+
+Algorithm GRAPH_COLORING(G, COLOR, i)
+// Description :  Solve the graph coloring problem using backtracking
+// Input : Graph G with n vertices, list of colors, initial 
+vertex i
+// COLOR[1…n] is the array of n different colors
+
+// Output : Colored graph with minimum color
+
+if CHECK_VERTEX(i) == 1 then
+  if i == N then
+    print  COLOR[1…n]
+  else
+    j ← 1
+    while (j ≤ M) do
+      COLOR(i + 1) ← j     
+      j ← j + 1
+    end
+  end
+end
+
+Function CHECK_VERTEX(i)
+for j ← 1 to i – 1 do
+  if Adjacent(i, j) then
+    if COLOR(i) == COLOR(j) then
+       return 0
+    end
+  end
+end					
+return 1
