@@ -1,0 +1,23 @@
+Breadth-first search is a graph traversal algorithm. 
+It starts traversing the graph from the root node and explores all 
+the neighboring nodes. 
+Then, it selects the nearest node and explores all the unexplored nodes. 
+The algorithm continues the same process for each of the 
+nearest nodes until it finds the goal.
+
+
+
+Algorithm
+Here, we’ll be defining the states in terms of (A, B).
+
+A — Amount of water in Jug A
+
+B — Amount of water in Jug B
+
+Therefore our initial state would be (0, 0) since both the jugs are empty and the final states of the process could be either (0, 2) or (2, 0) which means any jug would contain 02 Liters of water at the end.
+
+The steps that we’ll be performing in this approach are as follows.
+
+Empty a Jug: The state transition could be (A, B) -> (0, B). Let’s assume that we empty the Jug A.
+Fill a Jug: The state transition could be (0, 0) -> (A, 0). Let’s assume that we Fill Jug A.
+Pour water from one jug to the other until one of the jugs is either empty or full: The state transition could be (A, B) -> (A-d, B+d).
