@@ -1,0 +1,31 @@
+Steps involved in simple hill climbing algorithm
+
+Step 1: Evaluate the initial state, if it is goal state then return success and Stop.
+
+Step 2: Loop Until a solution is found or there is no new operator left to apply.
+
+Step 3: Select and apply an operator to the current state.
+
+Step 4: Check new state:
+
+If it is goal state, then return success and quit.
+
+Else if it is better than the current state then assign new state as a current state.
+
+Else if not better than the current state, then return to step2.
+
+Step 5: Exit.
+
+
+Local Maximum: Local maximum is a state which is better than its neighbor states, But not necessarily the best in the state space.
+
+Global Maximum: This is the best solution in the entire search space, where the objective function is the maximum.
+
+Current State: The point where we are during the search is the current state.
+
+Flat local maximum: Where all the neighbor states of current states have the same value.
+
+Shoulder:It is a plateau region which has an uphill edge.
+
+Ridges and alleys: It is region which is higher than its neighbor’s but itself has a slope. 
+
